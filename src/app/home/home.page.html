@@ -1,0 +1,144 @@
+<ion-header>
+  <ion-toolbar class="header-card">
+    <ion-img src="/assets/logo.jpg" class="logo"></ion-img>
+        <ion-icon slot="icon-only" color="#fff" slot="end" item="end"  name="search"></ion-icon>
+      <ion-menu-button color="#fff" slot="end" item="end"></ion-menu-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-grid class="welcome-card m-0 br-0">
+      <ion-slides pager="false" autoplay="2000" loop="true" class="" [options]="slideOpts">
+      <ion-slide class="item1">
+         <div class="p-item">
+                <!-- Set the first background image using inline CSS below. -->
+                <div class="fill" style="background-image:url('../assets/slider/slide1.png');">
+                  <div class="overlay"></div>
+                </div>
+                <div class="carousel-caption">
+                     <h2 class="animated fadeInLeft">2019</h2>
+                     <p class="animated fadeInUp">SUMMER COLLECTIONS</p>
+                     <button class="btn btn-ss btn-large">Shop Now</button>
+                </div>
+            </div>
+
+      </ion-slide>
+      <ion-slide>
+        <div class="p-item">
+                <!-- Set the first background image using inline CSS below. -->
+                <div class="fill" style="background-image:url('../assets/slider/slide2.png');">
+                  <div class="overlay"></div>
+                </div>
+                <div class="carousel-caption">
+                  <h2 class="animated fadeInLeft">2019</h2>
+                  <p class="animated fadeInUp">SUMMER COLLECTIONS</p>
+                  <button class="btn btn-ss btn-large">Shop Now</button>
+                </div>
+            </div>
+      </ion-slide>
+      <ion-slide>
+        <div class="p-item">
+                <!-- Set the first background image using inline CSS below. -->
+                <div class="fill" style="background-image:url('../assets/slider/slider3.jpg');">
+                  <div class="overlay"></div></div>
+                  <div class="carousel-caption">
+                    <h2 class="animated fadeInLeft">2019</h2>
+                    <p class="animated fadeInUp">SUMMER COLLECTIONS</p>
+                    <button class="btn btn-ss btn-large">Shop Now</button>
+                </div>
+            </div>
+      </ion-slide>
+    </ion-slides>
+
+
+
+    </ion-grid>
+
+
+    <ion-item-divider style="height:5px;">
+  <ion-label class="text-center">
+  </ion-label>
+</ion-item-divider>
+  <ion-grid>
+    <h4>Stunning fresh tops, shirts & tunics collection</h4>
+
+
+
+   <!--  <ion-slides pager="true" [options]="slideOptsFlip">
+      <ion-slide>
+        <h1>Slide 1</h1>
+      </ion-slide>
+      <ion-slide>
+        <h1>Slide 2</h1>
+      </ion-slide>
+      <ion-slide>
+        <h1>Slide 3</h1>
+      </ion-slide>
+    </ion-slides> -->
+
+     <div class="coverflow">
+   <ion-slides autoplay="2500" loop="true" effect="coverflow" [options]="slidesOptsCoverFlow">
+    <ion-slide *ngFor="let slide of slidePages" [ngStyle]="{'background' : 'url(' + slide.image + ')'}">
+    </ion-slide>
+  </ion-slides>
+</div>
+
+  <ion-item-divider>
+
+</ion-item-divider>
+</ion-grid>
+  <ion-grid>
+    <h4>Leather Trendz OFF Upto 60%</h4>
+  <ion-row>
+    <ion-col *ngFor="let slide of [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16 ]" size="6">
+      <div id="products" class="mp-row list-group">
+        <div class="mp-item  col-xs-4 col-md-3">
+            <div class="thumbnail">
+                <img class="group list-group-image" src="../assets/bags/{{slide}}.jpg" alt="" />
+              <div class="category">
+                <h5 class="category-name">Baggit Shoulder Bag</h5>
+                <p style=color:darkgreen>Offers Special price</p>
+              </div>
+                <div class="caption">
+                    <h4 class="group inner list-group-mp-item-heading">
+                        Baggit</h4>
+                         <ion-row>
+  <ion-col width-50 no-padding><button style="width:100%" class="btn-details">Details</button></ion-col>
+  <ion-col width-50 no-padding><button style="width:100%" class="btn-success">Add to cart</button></ion-col>
+</ion-row>
+                 </div>
+              </div>
+              </div>
+            </div>
+          
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+<ion-item-divider>
+</ion-item-divider>
+
+<ion-grid>
+    <h4>Men's ethnic wear By Syber Store</h4>
+  <ion-row>
+    <ion-col *ngFor="let slide of [1,2,3,4]" size="6">
+      <div id="products" class="mp-row list-group">
+        <div class="mp-item  col-xs-4 col-md-3">
+            <div class="collections">
+                <img class="group " src="../assets/shirts/{{slide}}.jpg" alt="" />
+                <h5 *ngIf="slide == 1">Sherwani</h5>
+                <h5 *ngIf="slide == 2">Kurta/Kurta Jacket</h5>
+                <h5 *ngIf="slide == 3">Jackets</h5>
+                <h5 *ngIf="slide == 4">Indo - Western</h5>
+              </div>
+              </div>
+            </div>
+          
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+
+
+</ion-content>
+  

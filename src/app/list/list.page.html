@@ -1,0 +1,74 @@
+<ion-header>
+  <ion-toolbar class="header-card">
+    <ion-img src="/assets/logo.jpg" class="logo"></ion-img>
+        <ion-icon slot="icon-only" color="#fff" slot="end" item="end"  name="search"></ion-icon>
+      <ion-menu-button color="#fff" slot="end" item="end"></ion-menu-button>
+  </ion-toolbar>
+</ion-header>
+<ion-content parallax-header>
+  <div class="header-image">
+  <ion-slides pager="true" [options]="slidesOptsCoverFlow" 
+    slidesPerView="2">
+    <ion-slide #productSlider *ngFor="let slide of [1,2,3]" >
+            <img src="../assets/chudi/{{slide}}.jpg" alt="img{{slide}}" style="width:90%;height:100%;">
+    </ion-slide>
+  </ion-slides>
+  <!-- <ion-icon name="heart-empty" class="float-right" size="large"></ion-icon>
+  <ion-icon name="cart" class="float-right" size="large"></ion-icon> -->
+  </div>
+
+  <div class="main-content">
+    <h3 class="product-title">
+    
+      
+      <span class="lang1">Vestibulum purus ipsum</span>
+      <span class="lang2">Vestibulum purus ipsum</span>
+      
+   
+  </h3>
+  <div class="product-desc">Demo minimalism</div>
+  <div class="product-price">
+    MRP RS 1000/-
+  </div>
+    
+        
+
+  </div>
+<ion-item-divider>
+
+</ion-item-divider>
+
+    <ion-grid>
+    <h4>Leather Trendz OFF Upto 60%</h4>
+  <ion-row>
+    <ion-col *ngFor="let slide of [1,2,3,4]" size="6">
+      <div class="item-image">
+        <img src="../assets/feature/{{slide}}.png" />
+        
+      </div>  
+      <div class="item-desc">
+        <p class="item-name">
+          Product          
+        </p>
+        <p class="item-price">
+          <span class="price">Rs 1300</span>
+          &nbsp;&nbsp;
+          <s><span class="st-price">Rs 2000</span></s>
+        </p>
+
+      </div>
+          
+    </ion-col>
+  </ion-row>
+</ion-grid>
+<ion-footer class="footer" translucent="true">
+  <ion-row>
+        <ion-col no-padding>
+          <ion-button color="primary" expand="block" class="footer-btn" border-radius="0px">Add To Cart</ion-button>
+        </ion-col>
+        <ion-col no-padding>
+           <ion-button  border-radius="0px" color="secondary" class="footer-btn" expand="block">Buy Now</ion-button>
+        </ion-col>
+    </ion-row>
+</ion-footer>
+</ion-content>

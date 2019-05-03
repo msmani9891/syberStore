@@ -1,0 +1,110 @@
+<ion-header>
+  <ion-toolbar class="header-card">
+    <ion-img src="/assets/logo.jpg" class="logo"></ion-img>
+        <ion-icon slot="icon-only" color="#fff" slot="end" item="end"  name="search"></ion-icon>
+      <ion-menu-button color="#fff" slot="end" item="end"></ion-menu-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card  *ngFor="let product of products;index as i">
+  <ion-card-content no-padding>
+        <ion-grid no-padding>
+        <ion-row no-padding >
+          <ion-col col-12 no-padding>
+            <div class="cart">
+                    <div class="cart-product first">
+                        <ion-row no-padding >
+                            <ion-col size="3" no-padding>
+                                <div class="contents">
+                                    <img src="../assets/chudi/{{product.image}}.jpeg" alt="" class="">
+                                </div>
+                            </ion-col>
+                            <ion-col size="8" no-padding>
+                                <div class="contents detail-sec pl-10">
+                                    <a href="">Fashion Casual Modern Style</a>
+                                    <small>Casual modern style t-shirls. 100% Cotton</small>
+                                    <ion-row>
+                                    <ion-col size="6">
+                                        <div class="contents ion-float-right">
+                                            <p class="in-stock">In-Stock</p>
+                                            <p>Item Id - ABC001</p>
+                                        </div>
+                                    </ion-col>
+                                    <ion-col size="6">
+                                        <div class="contents">
+                                            <h4 class="price">$20</h4>
+                                            <h5 class='disc-price'>$25</h5>
+                                        </div>
+                                    </ion-col>
+                                    <ion-col size="7">
+                                        <div class="contents">
+                                            <ion-icon name="remove-circle" class="product-count" (click)="decrement(i)"></ion-icon>
+                                            <input type="number" value="{{product.count}}" class="input-with-value">
+                                            <ion-icon name="add-circle" class="product-count" (click)="increment(i)"></ion-icon>
+                                        </div>
+                                    </ion-col>
+                                  </ion-row>
+                                </div>
+
+                            </ion-col>
+                            <ion-col size="1">
+                                 <div class="contents remove">
+                                     <ion-icon ios="ios-trash" md="md-trash"></ion-icon>
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                        
+                    </div>                  
+                </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      </ion-card-content>
+</ion-card>
+<ion-card>
+<div class="total-pay p-0">
+   <ion-card-content no-padding>
+        <ion-grid no-padding>
+        <ion-row class="p-15">
+            <ion-col size="10">
+                <div class="contents">
+                    <p>Total Amount  with offers applied</p>
+                </div>
+            </ion-col>
+            <ion-col size="2">
+                <div class="contents right">
+                    <p>$99</p>
+                </div>
+            </ion-col>
+            <ion-col size="10">
+                <div class="contents">
+                    <p>Difference after offer applied</p>
+                </div>
+            </ion-col>
+            <ion-col size="2">
+                <div class="contents right">
+                    <p>$9</p>
+                </div>
+            </ion-col>
+            <ion-col size="10">
+                <div class="contents">
+                    <h5>Amount need to paid</h5>
+                </div>
+            </ion-col>
+            <ion-col size="2">
+                <div class="contents right">
+                    <h5>$90</h5>
+                </div>
+            </ion-col>
+            
+        </ion-row>
+        <ion-button expand="block" class="w-100 btn-ss">Proceed to Checkout</ion-button>
+        <!-- <button class="button waves-effect waves-light"><i class="fa fa-send"></i>Proceed to Chekcout</button> -->
+      </ion-grid>
+    </ion-card-content>
+    </div>
+
+  </ion-card>
+</ion-content>
+  

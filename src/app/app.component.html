@@ -1,0 +1,38 @@
+<ion-app>
+  <ion-split-pane>
+    <!-- <ion-menu>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Test</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <ion-list>
+          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
+            <ion-item [routerDirection]="'root'" [routerLink]="[p.url]">
+              <ion-icon slot="start" [name]="p.icon"></ion-icon>
+              <ion-label>
+                {{p.title}}
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+      </ion-content>
+    </ion-menu> -->
+    <ion-menu side="end" type="push">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>SyberStore</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item href="/home">Home</ion-item>
+      <ion-item href="/list">Detail</ion-item>
+      <ion-item href="/cart">Cart</ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+    <ion-router-outlet main></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>
